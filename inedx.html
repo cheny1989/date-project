@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check</title>
+    <link rel="stylesheet" href="index.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+</head>
+
+<body dir="rtl">
+    <div class="bodyApp">
+        <div id="date_today"></div>
+        <h3>יש ללחוץ על הכפתור המבוקש</h3>
+        <button class="btn1">עובד גלובלי</button>
+        <button class="btn2">עובד שעתי</button>
+        <hr />
+        <div class="salary1">
+            <h2>חישוב הודעה מוקדמת - לעובד גלובלי</h2>
+            <hr class="global-hr">
+            <label>תאריך תחילת עבודה:</label>
+            <input type="date" id="DateOfStartWork1">
+            <br />
+            <label>תאריך הודעה:</label>
+            <input type="date" id="DateOfMassage1">
+            <br />
+            <button onclick="find1()" class="btnSend">בדוק נתונים לעובד גלובלי</button>
+            <br />
+            מספר ימי הודעה מוקדמת: <div id="date1"></div>
+            תאריך סיום לאחר ימי הודעה מוקדמת: <div id="date1A"></div>
+            <div id="errorInput"></div>
+            <button onclick="window.print()" class="printPage">הדפס</button> 
+        </div>
+
+        <div class="salary2">
+            <h2>חישוב הודעה מוקדמת - לעובד שעתי</h2>
+            <hr class="global-hr">
+            <label>תאריך תחילת עבודה:</label>
+            <input type="date" id="DateOfStartWork2">
+            <br />
+            <label>תאריך הודעה:</label>
+            <input type="date" id="DateOfMassage2">
+            <br />
+            <button onclick="find2()" class="btnSend">בדוק נתונים לעובד שעתי</button>
+            <br />
+            מספר ימי הודעה מוקדמת: <div id="date2"></div>
+            תאריך סיום לאחר ימי הודעה מוקדמת: <div id="date2A"></div>
+            <div id="errorInput2"></div>
+            <button onclick="window.print()" class="printPage">הדפס</button> 
+        </div>
+    </div>
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

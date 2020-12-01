@@ -1,0 +1,88 @@
+body{
+    font-size: 25px;
+    padding: 20px;
+}
+
+.bodyApp{
+width: 800px;
+background-color: rgb(233, 233, 233);
+padding: 5px 25px 25px 25px;
+}
+
+input{
+    width: 250px;
+    height: 40px;
+    font-size: 17px;
+}
+
+button{
+    width: 150px;
+    height: 30px;
+}
+
+.salary1, .salary2 {
+    display: none;
+}
+
+.btn1, .btn2{
+    background-color: rgb(98, 0, 255);
+    color: white;
+    width: 150px;
+    height: 80px;
+    font-size: 20px;
+}
+
+.btn1:hover, .btn2:hover{
+    background-color: rgb(75, 0, 195);
+}
+
+.btnSend{
+    background-color: rgb(245, 61, 29);
+    width: 250px;
+    height: 60px;
+    font-size: 20px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btnSend:hover{
+    background-color: rgb(209, 48, 20);
+
+
+}
+
+#date1, #date1A, #date2, #date2A{
+    background-color: white;
+    border: black solid 1px;
+    padding-right: 10px;
+}
+
+#errorInput, #errorInput2{
+    color: red;
+    font-size: 20px;
+}
+
+.global-hr{
+    width: 800px;
+    height: 7px ;
+    margin-top: -10px;
+    background-color: rgb(98, 0, 255);
+}
+
+#date_today{
+    text-align: left;
+    padding: 10px 2px;
+    font-size: 22px;
+}
+
+.printPage{
+    margin-top: 20px;
+    background-color: white;
+    width: 120px
+}
+
+.printPage:hover{
+    background-color: rgb(98, 0, 255);
+    color: white;
+}
