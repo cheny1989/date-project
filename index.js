@@ -38,17 +38,7 @@ find1 = () => {
     if (differenceDateInDays >= oneYEAR) {
         printFullDateNEW.innerHTML = " 30 ימים"
         dateMassage.setDate(dateMassage.getDate() + 30)
-        // printFullDateNEW_dateA.innerHTML = dateMassage;
-        console.log(dateMassage)
-
-        const full = dateMassage
-        const year = full.getFullYear();
-        const month = full.getMonth();
-        const day = full.getDay();
-        const fullDate = day + "/" + (month+1) + "/" + year
-        printFullDateNEW_dateA.innerHTML = fullDate;
-
-
+        printFullDateNEW_dateA.innerHTML = dateMassage;
         errorInput.style.display = "none"
 
     } else if (differenceDateInMonth < 6 && differenceDateInMonth < 12) {
@@ -198,6 +188,3 @@ $(document).ready(function () {
         $(".salary1").css({ "display": "none" });
     });
 });
-
-
-

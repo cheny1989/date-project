@@ -12,9 +12,10 @@
 </head>
 
 <body dir="rtl">
+    <div class="img-sch"><img src="logo-sch.PNG" width="150px"></div>
     <div class="bodyApp">
         <div id="date_today"></div>
-        <h3>יש ללחוץ על הכפתור המבוקש</h3>
+        <h3> יש ללחוץ על הכפתור המבוקש לחישוב ימי הודעה מוקדמת</h3>
         <button class="btn1">עובד גלובלי</button>
         <button class="btn2">עובד שעתי</button>
         <hr />
@@ -24,15 +25,15 @@
             <label>תאריך תחילת עבודה:</label>
             <input type="date" id="DateOfStartWork1">
             <br />
-            <label>תאריך הודעה:</label>
+            <label>תאריך הודעה מוקדמת:</label>
             <input type="date" id="DateOfMassage1">
             <br />
             <button onclick="find1()" class="btnSend">בדוק נתונים לעובד גלובלי</button>
             <br />
             מספר ימי הודעה מוקדמת: <div id="date1"></div>
-            תאריך סיום לאחר ימי הודעה מוקדמת: <div id="date1A"></div>
+            תאריך סיום לאחר ימי הודעה מוקדמת:<div id="date1A"></div>
             <div id="errorInput"></div>
-            <button onclick="window.print()" class="printPage">הדפס</button> 
+            <button onclick="window.print()" class="printPage">הדפס</button>
         </div>
 
         <div class="salary2">
@@ -41,7 +42,7 @@
             <label>תאריך תחילת עבודה:</label>
             <input type="date" id="DateOfStartWork2">
             <br />
-            <label>תאריך הודעה:</label>
+            <label>תאריך הודעה מוקדמת:</label>
             <input type="date" id="DateOfMassage2">
             <br />
             <button onclick="find2()" class="btnSend">בדוק נתונים לעובד שעתי</button>
@@ -49,9 +50,11 @@
             מספר ימי הודעה מוקדמת: <div id="date2"></div>
             תאריך סיום לאחר ימי הודעה מוקדמת: <div id="date2A"></div>
             <div id="errorInput2"></div>
-            <button onclick="window.print()" class="printPage">הדפס</button> 
+            <button onclick="window.print()" class="printPage">הדפס</button>
         </div>
     </div>
+    <div class="byMe">נוצר על-ידי חן יעקב</div> 
+
 
 
 
