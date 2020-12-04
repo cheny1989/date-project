@@ -4,8 +4,18 @@
     const year = textDate.getFullYear();
     const month = textDate.getMonth();
     const day = textDate.getDay();
-    const fullDate = (day-1) + "/" + (month+1) + "/" + year
-    text.innerHTML = fullDate
+  
+    // const fullDate = (day-1) + "/" + (month+1) + "/" + year
+
+    if(day<9 && month<9){
+        text.innerHTML = "0"+(day-1) + "/" +"0"+(month+1) + "/" + year
+    } else if (month<9){
+        text.innerHTML = (day-1) + "/" + "0"+(month+1) + "/" + year
+    } else if (day<9){
+        text.innerHTML = "0"+(day-1) + "/" + (month+1) + "/" + year
+    }else{
+        text.innerHTML = (day-1) + "/" + (month+1) + "/" + year
+    }
 
 
 find1 = () => {
@@ -41,15 +51,41 @@ find1 = () => {
         printFullDateNEW_dateA.innerHTML = dateMassage;
         errorInput.style.display = "none"
 
-    } else if (differenceDateInMonth < 6 && differenceDateInMonth < 12) {
+    } else if (differenceDateInMonth < 6) {
         printFullDateNEW.innerHTML = differenceDateInMonth * 1 + " ימים"
         dateMassage.setDate(dateMassage.getDate() + (differenceDateInMonth * 1))
         printFullDateNEW_dateA.innerHTML = dateMassage;
         errorInput.style.display = "none"
 
-    } else if (differenceDateInMonth >= 6 && differenceDateInMonth < 12) {
-        printFullDateNEW.innerHTML = differenceDateInMonth * 2.5 + " ימים"
-        dateMassage.setDate(dateMassage.getDate() + (differenceDateInMonth * 2.5))
+        // לתקן - מחודש 6 יומיים וחצי והיתר יום
+    } else if (differenceDateInMonth >= 6 && differenceDateInMonth < 7) {
+        printFullDateNEW.innerHTML = 6 + 2.5 + " ימים"
+        dateMassage.setDate(dateMassage.getDate() + (6+2.5))
+        printFullDateNEW_dateA.innerHTML = dateMassage;
+        errorInput.style.display = "none"
+    } else if (differenceDateInMonth >= 7 && differenceDateInMonth < 8) {
+        printFullDateNEW.innerHTML = 6 + 5 + " ימים"
+        dateMassage.setDate(dateMassage.getDate() + (6+5))
+        printFullDateNEW_dateA.innerHTML = dateMassage;
+        errorInput.style.display = "none"
+    } else if (differenceDateInMonth >= 8 && differenceDateInMonth < 9) {
+        printFullDateNEW.innerHTML = 6 + 7.5 + " ימים"
+        dateMassage.setDate(dateMassage.getDate() + (6+7.5))
+        printFullDateNEW_dateA.innerHTML = dateMassage;
+        errorInput.style.display = "none"
+    } else if (differenceDateInMonth >= 9 && differenceDateInMonth < 10) {
+        printFullDateNEW.innerHTML = 6 + 9 + " ימים"
+        dateMassage.setDate(dateMassage.getDate() + (6+9))
+        printFullDateNEW_dateA.innerHTML = dateMassage;
+        errorInput.style.display = "none"
+    } else if (differenceDateInMonth >= 10 && differenceDateInMonth < 11) {
+        printFullDateNEW.innerHTML = 6 + 11.5 + " ימים"
+        dateMassage.setDate(dateMassage.getDate() + (6+11.5))
+        printFullDateNEW_dateA.innerHTML = dateMassage;
+        errorInput.style.display = "none"
+    } else if (differenceDateInMonth >= 11 && differenceDateInMonth < 12) {
+        printFullDateNEW.innerHTML = 6 + 13 + " ימים"
+        dateMassage.setDate(dateMassage.getDate() + (6+13))
         printFullDateNEW_dateA.innerHTML = dateMassage;
         errorInput.style.display = "none"
 
@@ -175,6 +211,8 @@ find2 = () => {
     }
 }
 
+
+// hide / show window (after selcet type of worker)
 $(document).ready(function () {
     $(".btn1").click(function () {
         $(".salary1").css({ "display": "block" });
@@ -188,3 +226,60 @@ $(document).ready(function () {
         $(".salary1").css({ "display": "none" });
     });
 });
+
+$(document).ready(function () {
+    $("#errorInput2").click(function () {
+        $(".salary1").css({ "display": "none" });
+    });
+});
+
+// reset input = text and date - hour
+function resetInput1() {
+    $('#DateOfStartWork1').val('')
+    $('#DateOfMassage1').val('')
+    $('#fullName').val('')
+    $('#idOfWorker').val('')
+    $('#company').val('')
+      .attr('type', 'text')
+      .attr('type', 'date');
+  }
+
+  // reset input = text and date - globaly
+function resetInput2() {
+    $('#DateOfStartWork2').val('')
+    $('#DateOfMassage2').val('')
+    $('#fullName2').val('')
+    $('#idOfWorker2').val('')
+    $('#company2').val('')
+      .attr('type', 'text')
+      .attr('type', 'date');
+  }
+
+  var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+function showData(){
+    const fullName = document.getElementById("fullName").value
+    const idOfWorker = document.getElementById("idOfWorker").value
+    const company = document.getElementById("company").value
+    const data =  document.getElementById("showAllData").innerHTML= " העובד <b>" + fullName + "</b> ת.ז <b>" + idOfWorker + "</b> מחברת <b>" + company + '</b>'
+}
+
+function showData2(){
+    const fullName = document.getElementById("fullName2").value
+    const idOfWorker = document.getElementById("idOfWorker2").value
+    const company = document.getElementById("company2").value
+    const data =  document.getElementById("showAllData2").innerHTML= " העובד <b>" + fullName + "</b> ת.ז <b>" + idOfWorker + "</b> מחברת <b>" + company + '</b>'
+}

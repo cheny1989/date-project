@@ -1,7 +1,6 @@
 
-
 body{
-    font-size: 25px;
+    font-size: 20px;
     padding: 20px;
     margin-right: 25%;
     margin-left: 25%;
@@ -48,7 +47,7 @@ button{
     background-color: rgb(245, 61, 29);
     width: 250px;
     height: 60px;
-    font-size: 20px;
+    font-size: 18px;
     color: white;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -102,7 +101,7 @@ button{
 }
 
 #DateOfMassage1, #DateOfMassage2{
-    margin-right: 5px;
+    margin-right: 7px;
 }
 
 .byMe{
@@ -111,4 +110,83 @@ button{
     color: white;
     font-size: 15px;
     width: 850px;
+}
+
+.clearUnput{
+    width: 100px;
+    height: 60px;
+    background-color: yellowgreen;
+    font-size: 15px;
+}
+
+.clearUnput:hover{
+    background-color: rgb(125, 173, 27);
+}
+
+/* accordion */
+.accordion {
+    background-color: rgb(98, 0, 255);;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: right;
+    outline: none;
+    font-size: 18px;
+    transition: 0.4s;
+    border: rgb(29, 29, 29) solid 1px;
+    border-radius: 8px;
+    padding-bottom: 30px;
+    padding-right: 15px;
+  }
+  
+  .active, .accordion:hover {
+    background-color: rgb(194, 194, 194);
+    color: rgb(98, 0, 255);
+  }
+
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+  }
+
+  #company, #company2{
+    width: 238px;
+    height: 46px;
+  }
+
+  #showAllData{
+      margin-top: 15px;
+      padding: 10px;
+      border: rgb(29, 29, 29) solid 1px;
+  }
+
+  .showData, .showData2{
+      width: 100%;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      background-color: rgb(116, 34, 116);
+      color: white;
+      font-size: 17px;
+  }
+
+  .showData:hover, .showData2:hover{
+    background-color: rgb(83, 17, 83);
+  }
+
+
+  #showAllData2{
+    margin-top: 15px;
+    padding: 10px;
+    border: rgb(29, 29, 29) solid 1px;
+}
+
+.showData2{
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }

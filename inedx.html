@@ -7,6 +7,16 @@
     <title>check</title>
     <link rel="stylesheet" href="index.css">
 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 </head>
@@ -29,10 +39,32 @@
             <input type="date" id="DateOfMassage1">
             <br />
             <button onclick="find1()" class="btnSend">בדוק נתונים לעובד גלובלי</button>
+            <button onclick="resetInput1()" class="clearUnput">נקה שדות</button>
             <br />
             מספר ימי הודעה מוקדמת: <div id="date1"></div>
             תאריך סיום לאחר ימי הודעה מוקדמת:<div id="date1A"></div>
             <div id="errorInput"></div>
+
+            <div>
+            <button class="accordion">הרחב/צמצם - פרטי העובד</button>
+            <div class="panel">
+                <input type="text" placeholder="שם מלא..." id="fullName">
+                <input type="number" placeholder="ת.ז..." id="idOfWorker">
+                <select name="company" id="company">
+                    <option style="background-color: #cccccc;" disabled selected>בחר שם חברה...</option>
+                    <option value="אמ.די.טי">אמ.די.טי</option>
+                    <option value="שניידר הנדסת חשמל">שניידר הנדסת חשמל</option>
+                    <option value="תלקון יהלום">תלקון יהלום</option>
+                    <option value="נצר הנדסת חשמל">נצר הנדסת חשמל</option>
+                    <option value="ש.שניידר השקעות">ש. שניידר השקעות</option>
+                    <option value="רות ורובל">רות ורובל</option>
+                    <option value="בי.איצ'.אי">בי.אייצ'.אי</option>
+                </select>
+                <br />
+                <button onclick="showData()" class="showData">לחץ כדי להציג נתונים</button>
+                <div id="showAllData"></div>
+            </div>
+        </div>
             <button onclick="window.print()" class="printPage">הדפס</button>
         </div>
 
@@ -46,14 +78,37 @@
             <input type="date" id="DateOfMassage2">
             <br />
             <button onclick="find2()" class="btnSend">בדוק נתונים לעובד שעתי</button>
+            <button onclick="resetInput2()" class="clearUnput">נקה שדות</button>
             <br />
             מספר ימי הודעה מוקדמת: <div id="date2"></div>
             תאריך סיום לאחר ימי הודעה מוקדמת: <div id="date2A"></div>
             <div id="errorInput2"></div>
+            
+            <div>
+                <button class="accordion">הרחב/צמצם - פרטי העובד</button>
+                <div class="panel">
+                    <input type="text" placeholder="שם מלא..." id="fullName2">
+                    <input type="number" placeholder="ת.ז..." id="idOfWorker2">
+                    <select name="company" id="company2">
+                        <option style="background-color: #cccccc;" disabled selected>בחר שם חברה...</option>
+                        <option value="אמ.די.טי">אמ.די.טי</option>
+                        <option value="שניידר הנדסת חשמל">שניידר הנדסת חשמל</option>
+                        <option value="תלקון יהלום">תלקון יהלום</option>
+                        <option value="נצר הנדסת חשמל">נצר הנדסת חשמל</option>
+                        <option value="ש.שניידר השקעות">ש. שניידר השקעות</option>
+                        <option value="רות ורובל">רות ורובל</option>
+                        <option value="בי.איצ'.אי">בי.אייצ'.אי</option>
+                    </select>
+                    <br />
+                    <button onclick="showData2()" class="showData">לחץ כדי להציג נתונים</button>
+                    <div id="showAllData2"></div>
+                </div>
+            </div>
+            
             <button onclick="window.print()" class="printPage">הדפס</button>
         </div>
     </div>
-    <div class="byMe">נוצר על-ידי חן יעקב</div> 
+    <div class="byMe">נוצר על-ידי חן יעקב</div>
 
 
 
