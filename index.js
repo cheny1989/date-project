@@ -1,20 +1,21 @@
 
     const text = document.getElementById("date_today")
     const textDate = new Date();
-    const year = textDate.getFullYear();
-    const month = textDate.getMonth();
-    const day = textDate.getDay();
+    const yearDate = textDate.getFullYear();
+    const monthDate = textDate.getMonth();
+    const dayDate = textDate.getUTCDate();
+    console.log("1" + dayDate);
   
-    // const fullDate = (day-1) + "/" + (month+1) + "/" + year
+    // text.innerHTML=textDate;
 
-    if(day<9 && month<9){
-        text.innerHTML = "0"+(day-1) + "/" +"0"+(month+1) + "/" + year
-    } else if (month<9){
-        text.innerHTML = (day-1) + "/" + "0"+(month+1) + "/" + year
-    } else if (day<9){
-        text.innerHTML = "0"+(day-1) + "/" + (month+1) + "/" + year
+    if(dayDate<9 && monthDate<9){
+        text.innerHTML = "0"+(dayDate) + "/" +"0"+(monthDate+1) + "/" + yearDate
+    } else if (monthDate<9){
+        text.innerHTML = dayDate + "/" + "0"+(monthDate+1) + "/" + yearDate
+    } else if (dayDate<9){
+        text.innerHTML = "0"+dayDate + "/" + (monthDate+1) + "/" + yearDate
     }else{
-        text.innerHTML = (day-1) + "/" + (month+1) + "/" + year
+        text.innerHTML = (dayDate-1) + "/" + (monthDate+1) + "/" + yearDate
     }
 
 

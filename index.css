@@ -169,13 +169,13 @@ button{
       width: 100%;
       padding-top: 5px;
       padding-bottom: 5px;
-      background-color: rgb(116, 34, 116);
+      background-color: rgb(98, 0, 255);;
       color: white;
       font-size: 17px;
   }
 
   .showData:hover, .showData2:hover{
-    background-color: rgb(83, 17, 83);
+    background-color: rgb(75, 0, 195);
   }
 
 
@@ -189,4 +189,10 @@ button{
     width: 100%;
     padding-top: 5px;
     padding-bottom: 5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
